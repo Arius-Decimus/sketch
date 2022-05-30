@@ -1,0 +1,22 @@
+body {
+  background-color: #212121;
+  color: #fffee7;
+}
+
+h1 {
+  color: #fffee7;
+}
+
+#grid {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+#div {
+  display: flex;
+  flex: 1;
+}
