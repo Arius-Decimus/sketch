@@ -1,16 +1,39 @@
 const body = document.body;
 const grid = document.querySelector('#grid');
-const initialize = document.querySelector('#initialize');
-const div = document.createElement('div');
-div.setAttribute('id', 'div');
+const square = document.createElement('div');
 
-function divCreator() {
-  for (i = 0; i < 256; i++) {
-    grid.appendChild(div.cloneNode());
-    console.log('loop ' + i);
+function squareCreator() {
+  for (i = 1; i < 257; i++) {
+    square.setAttribute('class', 'square');
+    square.setAttribute('id', 'square ' + i);
+    square.addEventListener('mouseover', () => {
+      console.log(square.id);
+    });
+    
+    grid.appendChild(square.cloneNode());
+  }
+  if (i = 257) {
+    console.log('squareCreator run here.');
+    return;
   }
 }
 
-initialize.addEventListener('click', () => {
-  divCreator();
+function squareText () {
+  for (i = 0; i < 256; i++) {
+    let number = i + 1;
+    squares[i].innerHTML = '#' + number;
+    ;
+  }
+}
+
+squareCreator();
+
+const squares = document.querySelectorAll('.square');
+
+squares.forEach((square) => {
+  square.addEventListener('click',() => {
+    alert(square.id);
+  });
 });
+
+squareText();
