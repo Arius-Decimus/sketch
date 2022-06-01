@@ -1,13 +1,11 @@
-html {
-    height: 100%;
+html, body, #grid {
+  height: 100%;
   width: 100%;
 }
 
 body {
   background-color: #212121;
   color: #fffee7;
-  height: 100%;
-  width: 100%;
 }
 
 h1 {
@@ -17,8 +15,6 @@ h1 {
 #grid {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
   border: #fffee7;
 }
 
@@ -27,4 +23,13 @@ h1 {
   display: flex;
   color: aqua;
   border: solid #fffee7;
+}
+
+.square2 {
+  min-width: 5.8%;
+  display: flex;
+  color: aqua;
+  border: solid #fffee7;
+  background-color: blue;
+}
 }

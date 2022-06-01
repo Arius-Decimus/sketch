@@ -6,10 +6,6 @@ function squareCreator() {
   for (i = 1; i < 257; i++) {
     square.setAttribute('class', 'square');
     square.setAttribute('id', 'square ' + i);
-    square.addEventListener('mouseover', () => {
-      console.log(square.id);
-    });
-    
     grid.appendChild(square.cloneNode());
   }
   if (i = 257) {
@@ -28,12 +24,21 @@ function squareText () {
 
 squareCreator();
 
+
+
 const squares = document.querySelectorAll('.square');
 
-squares.forEach((square) => {
-  square.addEventListener('click',() => {
-    alert(square.id);
-  });
-});
 
-squareText();
+
+squares.forEach((square) => {
+  function removeStyle() {
+    square.setAttribute('class', 'square');
+  }
+
+  square.addEventListener('mouseenter',() => {
+    square.setAttribute('class', 'square2');
+  });
+  square.addEventListener('mouseout', () => {
+    setTimeout(removeStyle, '1000');
+  })
+});
